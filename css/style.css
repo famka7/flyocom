@@ -1,0 +1,235 @@
+:root {
+  /* gridaent colors */
+  --clr-p-1: hsl(6, 100%, 80%);
+  --clr-p-2: hsl(335, 100%, 65%);
+  /* color neatral */
+  --clr-n-pale-blue: hsl(243, 100%, 93%);
+  --clr-n-grayish-blue: hsl(229, 7%, 55%);
+  --clr-n-dark-blue: hsl(228, 56%, 26%);
+  --clr-n-very-dark-blue: hsl(229, 57%, 11%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 0.875rem;
+  background-color: var(--clr-n-very-dark-blue);
+  background-image: url(../images/bg-mobile.png);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main {
+  width: 85%;
+  margin: 1rem auto;
+}
+/* first block with images */
+.top {
+  background-color: var(--clr-n-dark-blue);
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+  border-top-right-radius: 6rem;
+  margin: 1.5rem 0;
+}
+.top > * {
+  margin: 1rem 0.8rem;
+}
+/* the second row of the first block */
+.images {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+/* contieners for svg and put the background color */
+.images > .img-con {
+  min-width: 25%;
+  align-content: center;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-n-very-dark-blue);
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+}
+/* ######################################################` */
+/* the second block  */
+.end {
+  background-color: var(--clr-n-dark-blue);
+  color: #fff;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  position: relative;
+}
+/* the first pragraph */
+.end > .pfirst {
+  font-weight: 400;
+}
+/* the span style */
+.end > .pfirst > .span {
+  font-weight: 700;
+}
+/* the css rules for progress bar */
+/* outline bar */
+.probar {
+  width: 95%;
+  height: 16px;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  background-color: var(--clr-n-very-dark-blue);
+  position: relative;
+}
+/* the inner bar */
+.probar > .bar {
+  background-image: linear-gradient(to right, var(--clr-p-1), var(--clr-p-2));
+  /*background-color: violet;
+  */
+  width: 70%;
+  height: 12px;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  margin-left: 2px;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  position: relative;
+}
+/* the white circle for the bar */
+.whitec {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  right: 1px;
+}
+/* the value for storage space and posistion for them */
+.p {
+  position: absolute;
+  bottom: -25px;
+}
+.p:first-of-type {
+  left: 4px;
+}
+.p:last-child {
+  right: 4px;
+}
+/* the tooltip css rules */
+.tooltip {
+  z-index: 1000000;
+  width: 60%;
+  padding: 1.2rem 1.8rem;
+  background-color: #fff;
+  color: var(--clr-n-very-dark-blue);
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translate(-30%, 0);
+  -webkit-transform: translate(-30%, 0);
+  -moz-transform: translate(-52%, 0);
+  -ms-transform: translate(-30%, 0);
+  -o-transform: translate(-30%, 0);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.tooltip > span {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--clr-n-grayish-blue);
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    background-image: url(../images/bg-desktop.png);
+    background-position: left 320px;
+  }
+  main {
+    width: 75%;
+    display: flex;
+  }
+  .top {
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .images {
+    justify-content: flex-start;
+  }
+  .top > .images > .img-con {
+    margin-right: 1rem;
+  }
+  .end {
+    width: 65%;
+    align-self: flex-end;
+    margin-left: 1.5rem;
+    text-align: left;
+  }
+  .end > .pfirst {
+    margin-left: 1rem;
+  }
+  .tooltip {
+    width: 30%;
+    top: -46px;
+    right: -65px;
+    left: unset;
+    bottom: unset;
+    border-bottom-right-radius: 0;
+  }
+  .tooltip::after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    border-left: 20px solid transparent;
+    border-top: 20px solid #fff;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
